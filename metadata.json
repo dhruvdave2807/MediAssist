@@ -1,0 +1,5 @@
+{
+  "name": "MediAssist – Easy Medical Report Analyzer",
+  "description": "An AI-powered web application that analyzes medical reports from PDF, image, or text files. It provides a simple summary, key findings, potential causes, care suggestions, and action steps in multiple languages, with an option to export the analysis as a PDF.",
+  "requestFramePermissions": []
+}
