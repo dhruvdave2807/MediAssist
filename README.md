@@ -44,4 +44,4 @@ I built **MediAssist**, a simple web app where users can upload their reports an
    npm run dev
 
 
-Made By = PAREKH VIVEKKUMAR 
+ Made By = PAREKH VIVEKKUMAR 
