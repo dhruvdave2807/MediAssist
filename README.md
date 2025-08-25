@@ -44,4 +44,8 @@ I built **MediAssist**, a simple web app where users can upload their reports an
    npm run dev
 
 
- Made By = PAREKH VIVEKKUMAR 
+## 👨‍💻 Made by
+**Dhruv Dave**  
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/dhruvdave2807/)
+
