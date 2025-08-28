@@ -56,16 +56,16 @@ export default function App(): React.ReactNode {
       return;
     }
 
-    if (translatedAnalysis) {
-      return; // Already translated, no need to call API again
+    if (translatedAnalysis && currentLanguage === lang) {
+      return; // Already translated to this language, no need to call API again
     }
 
     setIsLoading(true);
-    setLoadingMessage('Translating the report to Hindi...');
+    setLoadingMessage(`Translating the report to ${lang === 'Hindi' ? 'Hindi' : lang === 'Gujarati' ? 'Gujarati' : ''}...`);
     setError(null);
 
     try {
-      const translatedResult = await translateAnalysis(analysis, 'Hindi');
+      const translatedResult = await translateAnalysis(analysis, lang);
       setTranslatedAnalysis(translatedResult);
     } catch (err) {
       console.error(err);
@@ -75,7 +75,7 @@ export default function App(): React.ReactNode {
       setIsLoading(false);
       setLoadingMessage('');
     }
-  }, [analysis, translatedAnalysis]);
+  }, [analysis, translatedAnalysis, currentLanguage]);
   
   const handleReset = useCallback(() => {
     setFile(null);

@@ -43,7 +43,7 @@ const PdfContent: React.FC<{ analysis: AnalysisReport, language: Language }> = (
         padding: '40px',
         backgroundColor: 'white',
         color: 'black',
-        fontFamily: language === 'Hindi' ? '"Noto Sans Devanagari", Arial, sans-serif' : 'Arial, sans-serif',
+        fontFamily: language === 'Hindi' ? '"Noto Sans Devanagari", Arial, sans-serif' : language === 'Gujarati' ? '"Noto Sans Gujarati", Arial, sans-serif' : 'Arial, sans-serif',
         width: '210mm',
         minHeight: '297mm',
         boxSizing: 'border-box'
@@ -146,7 +146,7 @@ export const AnalysisDisplay: React.FC<AnalysisDisplayProps> = ({ analysis, curr
         <div className="flex items-center space-x-2 mb-4 sm:mb-0">
           <span className="font-semibold text-lg">Report Language:</span>
           <div className="flex space-x-1 bg-gray-200 p-1 rounded-lg">
-             <button
+            <button
               onClick={() => onLanguageChange('English')}
               className={`px-4 py-2 text-lg font-bold rounded-md transition-colors ${currentLanguage === 'English' ? 'bg-teal-600 text-white shadow' : 'text-gray-600 hover:bg-gray-300'}`}
             >
@@ -156,7 +156,13 @@ export const AnalysisDisplay: React.FC<AnalysisDisplayProps> = ({ analysis, curr
               onClick={() => onLanguageChange('Hindi')}
               className={`px-4 py-2 text-lg font-bold rounded-md transition-colors ${currentLanguage === 'Hindi' ? 'bg-teal-600 text-white shadow' : 'text-gray-600 hover:bg-gray-300'}`}
             >
-              हिन्दी {isTranslationAvailable && '✓'}
+              हिन्दी {isTranslationAvailable && currentLanguage === 'Hindi' && '✓'}
+            </button>
+            <button
+              onClick={() => onLanguageChange('Gujarati')}
+              className={`px-4 py-2 text-lg font-bold rounded-md transition-colors ${currentLanguage === 'Gujarati' ? 'bg-teal-600 text-white shadow' : 'text-gray-600 hover:bg-gray-300'}`}
+            >
+              ગુજરાતી {isTranslationAvailable && currentLanguage === 'Gujarati' && '✓'}
             </button>
           </div>
         </div>

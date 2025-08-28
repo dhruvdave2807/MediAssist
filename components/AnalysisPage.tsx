@@ -25,7 +25,7 @@ export const AnalysisPage: React.FC<AnalysisPageProps> = ({
   onLanguageChange,
   onReset,
 }) => {
-  const displayedAnalysis = currentLanguage === 'Hindi' && translatedAnalysis ? translatedAnalysis : analysis;
+  const displayedAnalysis = (currentLanguage === 'Hindi' || currentLanguage === 'Gujarati') && translatedAnalysis ? translatedAnalysis : analysis;
 
   return (
     <div className="max-w-4xl mx-auto">

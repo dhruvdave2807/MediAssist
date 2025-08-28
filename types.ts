@@ -7,4 +7,4 @@ export interface AnalysisReport {
   actionSteps: string[];
 }
 
-export type Language = 'English' | 'Hindi';
+export type Language = 'English' | 'Hindi' | 'Gujarati';
